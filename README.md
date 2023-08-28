@@ -59,4 +59,8 @@ Your readme will have various images and gifs on it. Upload a test image and tes
 
 ### Test Image
 
+![weirdfish](https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.jpg)
+
 ### Test GIF
+
+!weirdfish](https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.gif)
