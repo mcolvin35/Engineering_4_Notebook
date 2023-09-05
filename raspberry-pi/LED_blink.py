@@ -1,8 +1,8 @@
-import time 
 import board
 import digitalio
 
-led=digitalio.DigitalInOut(board.GP34)
+led=digitalio.DigitalInOut(board.GP28)
 led.direction=digitalio.Direction.OUTPUT
 
-led.value=Trueprint("LED ON")
+while True:
+    led.value=True
