@@ -26,14 +26,18 @@ Make a countdown timer that counts down each second from 10 to 0, and says "Lift
 #
 
 #### **Code**
+
+<details>
+<summary>Launchpad Part 1 Code</summary>
+
 ```python
 import time 
-
 for x in range(10, 0, -1): #loop 10 times, counting x down each time 
     print(x) #print x 
     time.sleep(1) #wait 1 second
 print("Liftoff!") #after 10 loops, print "Liftoff!"
 ```
+</details>
 
 #### **Reflection**
 
@@ -44,7 +48,7 @@ The challenge for this assignment was using the range function, since I haven't 
 #
 #### **Description**
 
-Make a red LED blink each time the timer counts down, and a green LED turn on at liftoff
+Make a red LED blink each time the timer counts down, and a green LED turn on at liftoff.
 
 #### **Evidence**
 #
@@ -56,7 +60,29 @@ Make a red LED blink each time the timer counts down, and a green LED turn on at
 This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
 
 #### **Code**
-Give me a link to your code. [Something like this](https://github.com/millerm22/Engineering_4_Notebook/blob/main/Raspberry_Pi/hello_world.py). Don't make me hunt through your folders, give me a nice link to click to take me there! Remember to **COMMENT YOUR CODE** if you want full credit. 
+```python
+#type: ignore
+
+import time 
+import board
+import digitalio
+
+red=digitalio.DigitalInOut(board.GP16) #assign red LED to pin 16 and set it as output 
+red.direction=digitalio.Direction.OUTPUT 
+
+green=digitalio.DigitalInOut(board.GP18) #assign green LED to pin 18 and set it as output 
+green.direction=digitalio.Direction.OUTPUT
+
+for x in range(10, 0, -1): #loop 10 times, counting down x each time 
+    print(x) #print x 
+    red.value=True #red LED on 
+    time.sleep(0.5) #wait half a second
+    red.value=False #red LED off
+    time.sleep(0.5)
+print("Liftoff!") #after 10 loops, print "Liftoff!"
+green.value=True #green LED on 
+time.sleep(10) #wait 10 seconds
+```
 
 #### **Reflection**
 
