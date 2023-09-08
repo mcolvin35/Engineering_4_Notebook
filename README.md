@@ -20,8 +20,10 @@
 Make a countdown timer that counts down each second from 10 to 0, and says "Liftoff" at 0. Must be printed to serial monitor.
 
 #### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/launchpad_p1.gif?raw=true" width="300">
 
-
+#
 
 #### **Code**
 ```python
