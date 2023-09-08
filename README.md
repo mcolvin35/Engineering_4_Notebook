@@ -44,12 +44,13 @@ The challenge for this assignment was using the range function, since I haven't 
 #
 #### **Description**
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
+Make a red LED blink each time the timer counts down, and a green LED turn on at liftoff
 
 #### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/launchpad_p2.gif?raw=true" width="300">
 
-Pictures / Gifs of your work should go here. You need to communicate what your thing does. 
-
+#
 #### **Wiring**
 
 This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
@@ -68,9 +69,10 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
 
 #### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.gif?raw=true" width="300">
 
-Pictures / Gifs of your work should go here. You need to communicate what your thing does. 
-
+#
 #### **Wiring**
 
 This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
@@ -89,9 +91,10 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
 
 #### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.gif?raw=true" width="300">
 
-Pictures / Gifs of your work should go here. You need to communicate what your thing does. 
-
+#
 #### **Wiring**
 
 This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
