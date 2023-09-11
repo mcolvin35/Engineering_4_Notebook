@@ -57,9 +57,13 @@ Make a red LED blink each time the timer counts down, and a green LED turn on at
 #
 #### **Wiring**
 
-This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/lpad_2_diagram.png?raw=true" width="300"> 
 
 #### **Code**
+
+<details>
+<summary>Launchpad Part 2 Code</summary>
+
 ```python
 #type: ignore
 
@@ -83,10 +87,12 @@ print("Liftoff!") #after 10 loops, print "Liftoff!"
 green.value=True #green LED on 
 time.sleep(10) #wait 10 seconds
 ```
+</details>
 
 #### **Reflection**
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+For me the hardest part of this assignment was the wiring. It's pretty simple but I kept messing it up by arranging things horizontally across the board, so things that weren't supposed to be connected were connected. 
+
 #
 ### **Launchpad Part 3**
 #
@@ -101,10 +107,17 @@ Write your assignment description here. What is the purpose of this assignment? 
 #
 #### **Wiring**
 
-This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.jpg?raw=true" width="300">  
 
 #### **Code**
-Give me a link to your code. [Something like this](https://github.com/millerm22/Engineering_4_Notebook/blob/main/Raspberry_Pi/hello_world.py). Don't make me hunt through your folders, give me a nice link to click to take me there! Remember to **COMMENT YOUR CODE** if you want full credit. 
+
+<details>
+<summary>Title</summary>
+
+```python
+    print("hello world!")
+```
+</details> 
 
 #### **Reflection**
 
@@ -123,10 +136,17 @@ Write your assignment description here. What is the purpose of this assignment? 
 #
 #### **Wiring**
 
-This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.jpg?raw=true" width="300"> 
 
 #### **Code**
-Give me a link to your code. [Something like this](https://github.com/millerm22/Engineering_4_Notebook/blob/main/Raspberry_Pi/hello_world.py). Don't make me hunt through your folders, give me a nice link to click to take me there! Remember to **COMMENT YOUR CODE** if you want full credit. 
+
+<details>
+<summary>Title</summary>
+
+```python
+    print("hello world!")
+```
+</details> 
 
 #### **Reflection**
 
