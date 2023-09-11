@@ -12,17 +12,22 @@ green.direction=digitalio.Direction.OUTPUT
 
 button=digitalio.DigitalInOut(board.GP15)
 button.direction=digitalio.Direction.INPUT
-button.pull=digitalio.Pull.DOWN
+button.pull=digitalio.Pull.UP
 
-if button.value==True:
-    for x in range(10, 0, -1): #loop 10 times, counting down x each time 
-        print(x) #print x 
-        red.value=True #red LED on 
-        time.sleep(0.5) #wait half a second
-        red.value=False #red LED off
-        time.sleep(0.5)
-    print("Liftoff!") #after 10 loops, print "Liftoff!"
-    green.value=True #green LED on 
-    time.sleep(10) #wait 10 seconds
-else:
-    print("Waiting...")
+p=button.value
+
+while True:
+    c=button.value
+    if c != p and button.value == 0:
+        for x in range(10, 0, -1): #loop 10 times, counting down x each time 
+            print(x) #print x 
+            red.value=True #red LED on 
+            time.sleep(0.5) #wait half a second
+            red.value=False #red LED off
+            time.sleep(0.5)
+        print("Liftoff!") #after 10 loops, print "Liftoff!"
+        green.value=True #green LED on 
+        time.sleep(5) #wait 5 seconds
+        green.value=False
+        c=button.value
+    p=c
