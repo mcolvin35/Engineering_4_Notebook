@@ -107,7 +107,7 @@ Add a button that starts the countdown.
 #
 #### **Wiring**
 
-<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.jpg?raw=true" width="300">  
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/lpad_3_diagram.png?raw=true" width="300">  
 
 #### **Code**
 
@@ -153,7 +153,8 @@ while True:
 
 #### **Reflection**
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+Since the Raspberry Pi has internal pull up resistors, the wiring of the button actually becomes a lot simpler than with the other boards as long as you use pull up, which kind of threw me off a little bit since it's different than what I've been doing. 
+
 #
 ## **Launchpad Part 4**
 #
