@@ -14,7 +14,7 @@
 
 ## **Launchpad**
 #
-### **Launchpad Part 1**
+## **Launchpad Part 1**
 #
 #### **Description**
 Make a countdown timer that counts down each second from 10 to 0, and says "Liftoff" at 0. Must be printed to serial monitor.
@@ -44,7 +44,7 @@ print("Liftoff!") #after 10 loops, print "Liftoff!"
 The challenge for this assignment was using the range function, since I haven't used that until now. The function give in output that starts at the first number, ends at the second number, and increments using the third number. 
 
 #
-### **Launchpad Part 2**
+## **Launchpad Part 2**
 #
 #### **Description**
 
@@ -94,15 +94,15 @@ time.sleep(10) #wait 10 seconds
 For me the hardest part of this assignment was the wiring. It's pretty simple but I kept messing it up by arranging things horizontally across the board, so things that weren't supposed to be connected were connected. 
 
 #
-### **Launchpad Part 3**
+## **Launchpad Part 3**
 #
 #### **Description**
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
+Add a button that starts the countdown. 
 
 #### **Evidence**
 #
-<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.gif?raw=true" width="300">
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/launchpad_p3.gif?raw=true" width="300">
 
 #
 #### **Wiring**
@@ -112,10 +112,42 @@ Write your assignment description here. What is the purpose of this assignment? 
 #### **Code**
 
 <details>
-<summary>Title</summary>
+<summary>Launchpad Part 3 Code</summary>
 
 ```python
-    print("hello world!")
+#type: ignore
+
+import time 
+import board
+import digitalio
+
+red=digitalio.DigitalInOut(board.GP16) #assign red LED to pin 16 and set it as output 
+red.direction=digitalio.Direction.OUTPUT 
+
+green=digitalio.DigitalInOut(board.GP18) #assign green LED to pin 18 and set it as output 
+green.direction=digitalio.Direction.OUTPUT
+
+button=digitalio.DigitalInOut(board.GP15) #assign button to pin 15 and set as input
+button.direction=digitalio.Direction.INPUT 
+button.pull=digitalio.Pull.UP #declare button as pull up, since rpi has built in pullup resistors
+
+p=button.value #previous state is button value (debouncing)
+
+while True:
+    c=button.value #current state is button value (debouncing)
+    if c != p and button.value == 0: #if current does not equal previous and button is pressed
+        for x in range(10, 0, -1): #loop 10 times, counting down x each time 
+            print(x) #print x 
+            red.value=True #red LED on 
+            time.sleep(0.5) #wait half a second
+            red.value=False #red LED off
+            time.sleep(0.5)
+        print("Liftoff!") #after 10 loops, print "Liftoff!"
+        green.value=True #green LED on 
+        time.sleep(5) #wait 5 seconds
+        green.value=False
+        c=button.value #current is button value (debouncing)
+    p=c #previous is current (debouncing)
 ```
 </details> 
 
@@ -123,7 +155,7 @@ Write your assignment description here. What is the purpose of this assignment? 
 
 What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
 #
-### **Launchpad Part 4**
+## **Launchpad Part 4**
 #
 #### **Description**
 
