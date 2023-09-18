@@ -169,7 +169,7 @@ Make a 180 servo move on liftoff
 #
 #### **Wiring**
 
-<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.jpg?raw=true" width="300"> 
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/lpad_4_diagram.png?raw=true" width="300"> 
 
 #### **Code**
 
@@ -223,7 +223,7 @@ while True:
 
 #### **Reflection**
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+I forgot which wires were what on the servo. Yellow is signal, red is power, and brown is ground.
 
 &nbsp;
 
