@@ -6,7 +6,7 @@ import digitalio
 import pwmio
 from adafruit_motor import servo
 
-pwm_servo = pwmio.PWMOut(board.GP28, duty_cycle=2 ** 15, frequency=50)
+pwm_servo = pwmio.PWMOut(board.GP28, duty_cycle=2 ** 15, frequency=50) #assign servo to pin 28
 serv = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
 
 
@@ -33,9 +33,9 @@ while True:
             time.sleep(0.5)
         print("Liftoff!") #after 10 loops, print "Liftoff!"
         green.value=True #green LED on 
-        serv.angle=180
+        serv.angle=180 #move servo 180 degrees
         time.sleep(5) #wait 5 seconds
         green.value=False
-        serv.angle=0
+        serv.angle=0 #move servo back
         c=button.value #current is button value (debouncing)
     p=c #previous is current (debouncing)
