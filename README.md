@@ -272,7 +272,7 @@ while True:
 </details>
 
 #### **Reflection**
-This assignment went pretty smoothly. Most of what I needed to do was outlined in Canvas. One thing that confused me was why the Z acceleration constantly read around 7, and I learned that it's because the accelerometer accounts for the pull of gravity. 
+This assignment went pretty smoothly. Most of what I needed to do was outlined in Canvas. One thing that confused me was why the Z acceleration constantly read around 10, and I learned that it's because the accelerometer accounts for the pull of gravity. 
 
 &nbsp;
 
