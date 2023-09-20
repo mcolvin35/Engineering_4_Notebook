@@ -235,28 +235,44 @@ I forgot which wires were what on the servo. Yellow is signal, red is power, and
 ## **Crash Avoidance Part 1**
 #
 #### **Description**
-Description!
+Make an accelerometer print X, Y, and Z acceleration values 
 
 #### **Evidence**
 #
-<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/launchpad_p1.gif?raw=true" width="300">
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/crash_p1.gif?raw=true" width="600">
 
 #
 #### **Wiring**
-<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/lpad_3_diagram.png?raw=true" width="300">  
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/crash_p1_diagram.png?raw=true" width="300"> 
+
 ####
 
  **Code**
 <details>
-<summary>Code Title!</summary>
+<summary>Crash Avoidance Part 1</summary>
 
 ```python
-Code!
+#type: ignore
+
+import busio
+import adafruit_mpu6050
+import board
+import time
+
+sda_pin = (board.GP26) #set SDA as GP26 and SCL as GP27
+scl_pin = (board.GP27)
+i2c = busio.I2C(scl_pin, sda_pin) #setup I2C connection
+
+mpu = adafruit_mpu6050.MPU6050(i2c) #setup accelerometer 
+
+while True:
+    print(f"X:{mpu.acceleration[0]} Y:{mpu.acceleration[1]} Z:{mpu.acceleration[2]}") #print values
+    time.sleep(0.2) #wait so the values are readable
 ```
 </details>
 
 #### **Reflection**
-Reflection!
+This assignment went pretty smoothly. Most of what I needed to do was outlined in Canvas. One thing that confused me was why the Z acceleration constantly read around 7, and I learned that it's because the accelerometer accounts for the pull of gravity. 
 
 &nbsp;
 
