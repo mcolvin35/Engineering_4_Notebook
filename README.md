@@ -8,6 +8,11 @@
     * [Part 2](#launchpad-part-2)
     * [Part 3](#launchpad-part-3)
     * [Part 4](#launchpad-part-4)
+* [Crash Avoidance](#crash-avoidance)
+    * [Part 1](##crash-avoidance-part-1)
+    * [Part 2](##crash-avoidance-part-2)
+    * [Part 3](##crash-avoidance-part-3)
+    * [Part 4](##crash-avoidance-part-4)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
@@ -224,6 +229,34 @@ while True:
 #### **Reflection**
 
 I forgot which wires were what on the servo. Yellow is signal, red is power, and brown is ground.
+
+## **Crash Avoidance**
+#
+## **Crash Avoidance Part 1**
+#
+#### **Description**
+Description!
+
+#### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/launchpad_p1.gif?raw=true" width="300">
+
+#
+#### **Wiring**
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/lpad_3_diagram.png?raw=true" width="300">  
+####
+
+ **Code**
+<details>
+<summary>Code Title!</summary>
+
+```python
+Code!
+```
+</details>
+
+#### **Reflection**
+Reflection!
 
 &nbsp;
 
