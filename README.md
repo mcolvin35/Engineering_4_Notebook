@@ -282,11 +282,11 @@ Make the board run unplugged from a computer, and make a warning light turn on w
 
 #### **Evidence**
 #
-<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.gif?raw=true" width="300">
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/crash_p2.gif?raw=true" width="400">
 
 #
 #### **Wiring**
-<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.jpg?raw=true" width="300">  
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/crash_p2_diagram.png?raw=true" width="400">  
 
 ####
 
