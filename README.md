@@ -274,6 +274,58 @@ while True:
 #### **Reflection**
 This assignment went pretty smoothly. Most of what I needed to do was outlined in Canvas. One thing that confused me was why the Z acceleration constantly read around 10, and I learned that it's because the accelerometer accounts for the pull of gravity. 
 
+#
+## **Crash Avoidance Part 2**
+#
+#### **Description**
+Make the board run unplugged from a computer, and make a warning light turn on when it's on its side
+
+#### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.gif?raw=true" width="300">
+
+#
+#### **Wiring**
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.jpg?raw=true" width="300">  
+
+####
+
+ **Code**
+<details>
+<summary>Crash Avoidance Part 2</summary>
+
+```python
+#type: ignore
+
+import busio
+import adafruit_mpu6050
+import board
+import time
+import digitalio
+
+sda_pin = (board.GP26) #set SDA as GP26 and SCL as GP27
+scl_pin = (board.GP27)
+i2c = busio.I2C(scl_pin, sda_pin) #setup I2C connection
+
+led=digitalio.DigitalInOut(board.GP16) #assign LED to GP16 and set it as output
+led.direction=digitalio.Direction.OUTPUT 
+
+mpu = adafruit_mpu6050.MPU6050(i2c) #setup accelerometer 
+
+while True:
+    print(f"X:{mpu.acceleration[0]} Y:{mpu.acceleration[1]} Z:{mpu.acceleration[2]}") #print values
+    time.sleep(0.2) #wait so the values are readable
+    if mpu.acceleration[2] < 1 and mpu.acceleration[2] > -12: #if z acceleration is less than 1 (meaning board is on its side) and greater than -12 (so LED won't turn on when board is accelerating in Z)
+        if mpu.acceleration[0] > +-5 or mpu.acceleration[1] > +-5: #also, if X and Y acceleration are greater than positive or negative 5 (meaning gravity is affecting one of them)
+            led.value=True #turn LED on
+    else: #otherwise
+        led.value=False #LED is off
+```
+</details>
+
+#### **Reflection**
+The hardest part of this assignment was getting everything to fit on one breadboard. There was just barely enough room in between the accelerometer and board for the battery to fit. 
+
 &nbsp;
 
 ## Onshape_Assignment_Template
