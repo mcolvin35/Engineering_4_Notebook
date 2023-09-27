@@ -343,7 +343,7 @@ Make an OLED screen display angular velocity values to 3 decimal places
 
  **Code**
 <details>
-<summary>Crash Avoidance Part 3 Code<summary>
+<summary>Crash Avoidance Part 3 Code</summary>
 
 ```python
 #type: ignore
@@ -373,9 +373,6 @@ display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
 
 led=digitalio.DigitalInOut(board.GP16) #assign LED to GP16 and set it as output
 led.direction=digitalio.Direction.OUTPUT 
-
-
-
 
 while True:
     splash = displayio.Group() #create display group
