@@ -338,7 +338,7 @@ Make an OLED screen display angular velocity values to 3 decimal places
 
 #
 #### **Wiring**
-<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.jpg?raw=true" width="300">  
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/crash_p3_diagram.png?raw=true" width="300">  
 
 ####
 
@@ -409,7 +409,7 @@ while True:
 </details>
 
 #### **Reflection**
-My biggest hurdle for this assignment was figuring out how to code for the OLED screen. 
+My biggest hurdle for this assignment was figuring out how to code for the OLED screen. You need to create a display group, define everything in that group, and then send it to the screen. 
 
 &nbsp;
 
