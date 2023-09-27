@@ -4,22 +4,21 @@
 
 ## **Table of Contents**
 * [Launchpad](#launchpad)
-    * [Part 1](#launchpad-part-1)
-    * [Part 2](#launchpad-part-2)
-    * [Part 3](#launchpad-part-3)
-    * [Part 4](#launchpad-part-4)
+    * [Part 1](#countdown)
+    * [Part 2](#lights)
+    * [Part 3](#button)
+    * [Part 4](#servo)
 * [Crash Avoidance](#crash-avoidance)
-    * [Part 1](#crash-avoidance-part-1)
-    * [Part 2](#crash-avoidance-part-2)
-    * [Part 3](##crash-avoidance-part-3)
-    * [Part 4](##crash-avoidance-part-4)
+    * [Part 1](#accelerometer)
+    * [Part 2](#lightpower)
+    * [Part 3](#oled-screen)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
 &nbsp;
 
 ## **Launchpad**
 #
-## **Launchpad Part 1**
+## **Countdown**
 #
 #### **Description**
 Make a countdown timer that counts down each second from 10 to 0, and says "Liftoff" at 0. Must be printed to serial monitor.
@@ -49,7 +48,7 @@ print("Liftoff!") #after 10 loops, print "Liftoff!"
 The challenge for this assignment was using the range function, since I haven't used that until now. The function give in output that starts at the first number, ends at the second number, and increments using the third number. 
 
 #
-## **Launchpad Part 2**
+## **Lights**
 #
 #### **Description**
 
@@ -99,7 +98,7 @@ time.sleep(10) #wait 10 seconds
 For me the hardest part of this assignment was the wiring. It's pretty simple but I kept messing it up by arranging things horizontally across the board, so things that weren't supposed to be connected were connected. 
 
 #
-## **Launchpad Part 3**
+## **Button**
 #
 #### **Description**
 
@@ -161,7 +160,7 @@ while True:
 Since the Raspberry Pi has internal pull up resistors, the wiring of the button actually becomes a lot simpler than with the other boards as long as you use pull up, which kind of threw me off a little bit since it's different than what I've been doing. 
 
 #
-## **Launchpad Part 4**
+## **Servo**
 #
 #### **Description**
 
@@ -232,7 +231,7 @@ I forgot which wires were what on the servo. Yellow is signal, red is power, and
 
 ## **Crash Avoidance**
 #
-## **Crash Avoidance Part 1**
+## **Accelerometer**
 #
 #### **Description**
 Make an accelerometer print X, Y, and Z acceleration values 
@@ -275,7 +274,7 @@ while True:
 This assignment went pretty smoothly. Most of what I needed to do was outlined in Canvas. One thing that confused me was why the Z acceleration constantly read around 10, and I learned that it's because the accelerometer accounts for the pull of gravity. 
 
 #
-## **Crash Avoidance Part 2**
+## **Light+Power**
 #
 #### **Description**
 Make the board run unplugged from a computer, and make a warning light turn on when it's on its side
@@ -327,7 +326,7 @@ while True:
 The hardest part of this assignment was getting everything to fit on one breadboard. There was just barely enough room in between the accelerometer and board for the battery to fit. 
 
 #
-## **Crash Avoidance Part 3**
+## **Oled Screen**
 #
 #### **Description**
 Make an OLED screen display angular velocity values to 3 decimal places
