@@ -30,11 +30,11 @@ led.direction=digitalio.Direction.OUTPUT
 
 
 while True:
-    splash = displayio.Group()
+    splash = displayio.Group() #create display group
 
     title = "ANGULAR VELOCITY"
 
-    header = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=18, y=10)
+    header = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=18, y=10) #setup location for all lines
     X_display = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=45, y=25)
     Y_display = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=45, y=40)
     Z_display = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=45, y=55)
@@ -43,12 +43,13 @@ while True:
     splash.append(Y_display) 
     splash.append(Z_display) 
 
-    header = "ANGULAR VELOCITY:"
-    X_display.text = f"X:{round(mpu.gyro[0], 3)}"
+    header = "ANGULAR VELOCITY:" #print header and all gyro values
+    X_display.text = f"X:{round(mpu.gyro[0], 3)}" 
     Y_display.text = f"Y:{round(mpu.gyro[1], 3)}"
     Z_display.text = f"Z:{round(mpu.gyro[2], 3)}"
 
-    display.show(splash)
+    display.show(splash) #send display group to screen
+
     time.sleep(0.2) #wait so the values are readable
     if mpu.acceleration[2] < 1 and mpu.acceleration[2] > -12: #if z acceleration is less than 1 (meaning board is on its side) and greater than -12 (so LED won't turn on when board is accelerating in Z)
         if mpu.acceleration[0] > +-5 or mpu.acceleration[1] > +-5: #also, if X and Y acceleration are greater than positive or negative 5 (meaning gravity is affecting one of them)
