@@ -326,7 +326,7 @@ while True:
 The hardest part of this assignment was getting everything to fit on one breadboard. There was just barely enough room in between the accelerometer and board for the battery to fit. 
 
 #
-## **Oled Screen**
+## **OLED Screen**
 #
 #### **Description**
 Make an OLED screen display angular velocity values to 3 decimal places
