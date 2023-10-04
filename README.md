@@ -12,7 +12,7 @@
     * [Part 1](#accelerometer)
     * [Part 2](#lightpower)
     * [Part 3](#oled-screen)
-* [Onshape_Assignment_Template](#onshape_assignment_template)
+* [FEA Beam]()
 
 &nbsp;
 
@@ -409,23 +409,33 @@ My biggest hurdle for this assignment was figuring out how to code for the OLED 
 
 &nbsp;
 
-## Onshape_Assignment_Template
+#
+#O *
+#
+## FEA Beam
 
 ### Assignment Description
+For this assignment we needed to design a beam to hold the most weight possible. The beam fails if it either bends over 35 mm or breaks. The requirements are as follows.
+* The beam must use the provided attachment block with no modifications.
+* The beam with the attachment block must be able to fully engage with the holder
+* The beam must use the example eye bolt mounting geometry
+* The center of the eyebolt hole must be 180 mm from the front face of the attachment block (in a direction perpendicular to the front face)
+* No part of the beam may extend below the bottom face of the attachment block
+* All vertical angles must be >= 45° measured relative to the horizontal plane (no overhangs)
+* The beam must be PLA material
+* **The entire beam, including attachment block, must weigh <= 13 grams**
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
 
-### Part Link 
+### Part Link
 
-[Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
+[Link to the Onshape document](https://cvilleschools.onshape.com/documents/5ca195b929dce9b9f5de0c38/w/484c080f78991bb9985dcd6a/e/202c4b844babd7b88e7d7022?renderMode=0&uiState=651ad471654b7d4777a38ffc).
 
 ### Part Image
-
-Take a nice screenshot of your Onshape document. 
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/fea1.png?raw=true" >
 
 ### Reflection
+This assignment had a lot of challenges since the guidelines were very limiting. Not being able to have any overhangs was the tough part, but we were able to work around that by using ovals instead of triangles. 
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
 
 &nbsp;
 
