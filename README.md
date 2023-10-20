@@ -12,8 +12,11 @@
     * [Part 1](#accelerometer)
     * [Part 2](#lightpower)
     * [Part 3](#oled-screen)
-* [FEA Beam]()
-
+* [FEA Beam](#fea-beam)
+    * [Part 1](#fea-beam)
+    * [Part 3](#fea-analysis)
+    * [Part 4](#iterative-design)
+    * [Part 5](#final-beam)
 &nbsp;
 
 ## **Launchpad**
@@ -472,12 +475,38 @@ The task for this assignment was to improve our beam based on what we found from
 #
 
 ### Part Image
+<img src="https://github.com/dhalber11/Engineering_4_Notebook/blob/main/images/v2.png?raw=true" >
+
 <img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/fea_v2sim.png?raw=true" >
 
 #
 
 ### Reflection
 Sadly, this beam ending up being worse than our original design. It looks like there's less stress overall but that actual calculations shows that there's more stress. I think we might have removed too much mass from the middle part of the beam, and we should've kept it as a uniform beam.
+#
+
+## **Final Beam**
+#
+
+### Assignment Description
+For this assignment we were supposed to use the knowledge we learned from the beam breaking in order to improve our beams.
+#
+
+### Part Link
+
+[Link to the Onshape document](https://cvilleschools.onshape.com/documents/5ca195b929dce9b9f5de0c38/w/484c080f78991bb9985dcd6a/e/202c4b844babd7b88e7d7022?renderMode=0&uiState=651ad471654b7d4777a38ffc).
+#
+
+### Part Image
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/fea_v3.png?raw=true" >
+
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/fea_v3sim.png?raw=true" >
+
+#
+
+### Reflection
+After the original success of the I-beam based designs in the first round, we wanted to do something similar while still preserving our integrity. This beam was the result, a solid beam that tapers closer to the end with round edges. It was a **huge** improvement from the other versions. It deflected fairly easily, but it never broke and basically just became a rope.
+
 
 &nbsp;
 
