@@ -1,6 +1,7 @@
 #type: ignore
 
 from adafruit_display_text import label
+import board
 import adafruit_displayio_ssd1306
 import terminalio
 import displayio
@@ -13,7 +14,7 @@ displayio.release_displays()
 sda_pin = board.GP26
 scl_pin = board.GP27
 i2c = busio.I2C(scl_pin, sda_pin)
-display_bus = displayio.I2CDisplay(i2c, reset=board.GP28)
+display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP28)
 display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
 
 
@@ -53,3 +54,11 @@ while True:
     
     else: 
         print(f"The area of the triangle with vertices ({val1}), ({val2}), ({val3}) is {area} square km.")
+
+        splash = displayio.Group()
+
+        circle = Circle(64, 32, 3, outline=0xFFFF00)
+        triangle = Triangle(x1y1[0])
+        splash.append(circle)    
+
+        display.show(splash)
