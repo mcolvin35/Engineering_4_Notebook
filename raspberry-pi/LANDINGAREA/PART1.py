@@ -13,6 +13,8 @@ def find_area(x1y1, x2y2, x3y3):
 
         area = (1/2)*abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))
         
+        if area == 0:
+            print("These points are not a valid triangle. Please try again, and make sure you are using the x,y syntax!")
         return area
     except: 
         print("These points are not a valid triangle. Please try again, and make sure you are using the x,y syntax!")
@@ -31,4 +33,4 @@ while True:
         continue
     
     else: 
-        print(f"The area of the triangle with vertices {val1}, {val2}, {val3} is {area} square km.")
+        print(f"The area of the triangle with vertices ({val1}), ({val2}), ({val3}) is {area} square km.")
