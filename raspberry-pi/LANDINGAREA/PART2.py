@@ -75,12 +75,12 @@ while True:
         print(f"The area of the triangle with vertices ({val1}), ({val2}), ({val3}) is {area} square km.")
 
         plot = displayio.Group()
-        triangle = Triangle(int(x1+64), int(y1+32), int(x2+64), int(y2+32), int(x3+64), int(y3+32), outline=0xFFFF00)
+        triangle = Triangle(int(x1+64), int(-y1+32), int(x2+64), int(-y2+32), int(x3+64), int(-y3+32), outline=0xFFFF00)
         circle = Circle(64, 32, 3, outline=0xFFFF00)
         xline = Line(0, 32, 128, 32, color=0xFFFF00)
         yline = Line(64, 0, 64, 64, color=0xFFFF00)
-        text = "balls"
-        area_display = label.Label(terminalio.FONT, text=text, color=0xFFFF00, x=8, y=8)
+        text = f"{area} km^2"
+        area_display = label.Label(terminalio.FONT, text=text, color=0xFFFF00, x=26, y=8)
         plot.append(area_display)
         plot.append(xline)
         plot.append(yline)
