@@ -410,6 +410,95 @@ while True:
 #### **Reflection**
 My biggest hurdle for this assignment was figuring out how to code for the OLED screen. You need to create a display group, define everything in that group, and then send it to the screen. 
 
+#
+## **Landing Area**
+#
+## **Functions**
+#
+#### **Description**
+The task for this assignment was to write a script that would ask for 3 coordinates and then give the area of the triangle that those three points make. If there is a syntax error, the program should give an error message but not crash.
+
+#### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.gif?raw=true" width="300">
+
+# 
+####
+
+ **Code**
+<details>
+<summary>Landing Area Part 1 Code</summary>
+
+```python
+def find_area(x1y1, x2y2, x3y3): 
+    try: #if there is an error inside the loop, program won't close
+        x1y1 = x1y1.split(",") #split x1y1 into 2 separate values at the comma
+        x2y2 = x2y2.split(",")
+        x3y3 = x3y3.split(",")
+        
+        x1 = float(x1y1[0]) #x1 is the first part 
+        y1 = float(x1y1[1])
+        x2 = float(x2y2[0])
+        y2 = float(x2y2[1])
+        x3 = float(x3y3[0])
+        y3 = float(x3y3[1])
+
+        area = (1/2)*abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)) #function for calculating area
+        
+        if area == 0: #if points don't make a triangle
+            print("These points are not a valid triangle. Please try again, and make sure you are using the x,y syntax!") #print error message
+        return area
+    except: #if there is a syntax error
+        print("These points are not a valid triangle. Please try again, and make sure you are using the x,y syntax!") #print error message
+
+        area = 0
+        return area
+
+while True: 
+    val1 = input("Enter first coordinate:")
+    val2 = input("Enter second coordinate:")
+    val3 = input("Enter third coordinate:")
+
+    area = find_area(val1, val2, val3) #call function
+
+    if area == 0:   
+        continue
+    
+    else: #if everything works out
+        print(f"The area of the triangle with vertices ({val1}), ({val2}), ({val3}) is {area} square km.") #print values
+```
+</details>
+
+#### **Reflection**
+This assignment was pretty challenging since there were a lot of commands that I had never used before such as split, input, and try loops. I also had some issues with the variables and understanding how they worked inside and outside the function. 
+
+#
+## **Plotting**
+#
+#### **Description**
+For this assignment the task was to add an OLED screen that would plot each triangle.
+
+#### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.gif?raw=true" width="300">
+
+#
+#### **Wiring**
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/weirdfish.jpg?raw=true" width="300">  
+
+####
+
+ **Code**
+<details>
+<summary>Code Title!</summary>
+
+```python
+Code!
+```
+</details>
+
+#### **Reflection**
+Reflection!
 &nbsp;
 
 #
