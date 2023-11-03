@@ -14,7 +14,8 @@ MORSE_CODE = { 'A':'.-', 'B':'-...',
     '7':'--...', '8':'---..', '9':'----.',
     '0':'-----', ', ':'--..--', '.':'.-.-.-',
     '?':'..--..', '/':'-..-.', '-':'-....-',
-    '(':'-.--.', ')':'-.--.-', ' ': '/', '!': } #dictionary for morse code translations
+    '(':'-.--.', ')':'-.--.-', ' ': '/', 
+    '!': '-.-.--'}  #dictionary for morse code translations
 
 while True:
     message = input("Your message: ").upper() #ask for input and convert it to uppercase so dictionary can read it 
