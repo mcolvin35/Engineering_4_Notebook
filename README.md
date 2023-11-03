@@ -596,7 +596,7 @@ This assignment went pretty well for me. It helped me to gain a better understan
 #
 ## **Morse Code**
 #
-## **Translator**
+## **Translation**
 #
 #### **Description**
 Write a translator that translates text from the user into morse code. The code must represent breaks between letters with a space and breaks between words with a slash. It must also exit the program if the user types "-q"
