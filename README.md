@@ -592,6 +592,65 @@ while True:
 
 #### **Reflection**
 This assignment went pretty well for me. It helped me to gain a better understanding of how the OLED screen works because I didn't really get it last time. 
+
+#
+## **Morse Code**
+#
+## **Translator**
+#
+#### **Description**
+Write a translator that translates text from the user into morse code. The code must represent breaks between letters with a space and breaks between words with a slash. It must also exit the program if the user types "-q"
+
+#### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/morsep1.gif?raw=true" width="500">
+
+#
+
+####
+
+ **Code**
+<details>
+<summary>Morse Code Part 1 Code</summary>
+
+```python
+#type: ignore
+
+MORSE_CODE = { 'A':'.-', 'B':'-...',
+    'C':'-.-.', 'D':'-..', 'E':'.',
+    'F':'..-.', 'G':'--.', 'H':'....',
+    'I':'..', 'J':'.---', 'K':'-.-',
+    'L':'.-..', 'M':'--', 'N':'-.',
+    'O':'---', 'P':'.--.', 'Q':'--.-',
+    'R':'.-.', 'S':'...', 'T':'-',
+    'U':'..-', 'V':'...-', 'W':'.--',
+    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+    '1':'.----', '2':'..---', '3':'...--',
+    '4':'....-', '5':'.....', '6':'-....',
+    '7':'--...', '8':'---..', '9':'----.',
+    '0':'-----', ', ':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    '(':'-.--.', ')':'-.--.-', ' ': '/', 
+    '!': '-.-.--'}  #dictionary for morse code translations
+
+while True:
+    message = input("Your message: ").upper() #ask for input and convert it to uppercase so dictionary can read it 
+
+    translate = "" #create empty translation
+
+    if "-Q" in message: #exit script if "-Q" is in the message
+        break
+
+    for letter in range(len(message)): #for every letter in the message 
+        translate += MORSE_CODE[message[letter]] + " " #translate letter and move to the next one 
+    print (f"My translation: {translate}") #print translation
+        
+
+```
+</details>
+
+#### **Reflection**
+One issue I ran into during this assignment was figuring out how to get the translation to show a break between words as a slash, but I figured out that the solution was simply to add that to the dictionary. I did the same with an exclamation point. 
 &nbsp;
 
 #
