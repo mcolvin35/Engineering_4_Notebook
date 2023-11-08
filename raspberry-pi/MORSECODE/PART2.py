@@ -48,15 +48,19 @@ while True:
             led.value = True
             time.sleep(dot_time)
             led.value = False
+            time.sleep(dot_time)
         if letter == "-":
             led.value = True
             time.sleep(dash_time)
             led.value = False
+            time.sleep(dot_time)
         if letter == " ":
             led.value = True
             time.sleep(between_letters)
             led.value = False
+            time.sleep(dot_time)
         if letter == "/":
             led.value = True
             time.sleep(between_words)
             led.value = False    
+            time.sleep(dot_time)
