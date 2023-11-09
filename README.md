@@ -20,6 +20,9 @@
 * [Landing Area](#landing-area)
     * [Part 1](#functions)
     * [Part 2](#plotting)
+* [Morse Code](#morse-code)
+    * [Part 1](#translation)
+    * [Part 2](#transmission)
 &nbsp;
 
 ## **Launchpad**
