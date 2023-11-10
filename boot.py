@@ -18,7 +18,8 @@ write_pin = digitalio.DigitalInOut(board.GP15)
 write_pin.direction = digitalio.Direction.INPUT
 write_pin.pull = digitalio.Pull.UP
 
-led = digitalio.DigitalInOut(board.LED) led.direction = digitalio.Direction.OUTPUT
+led = digitalio.DigitalInOut(board.LED) 
+led.direction = digitalio.Direction.OUTPUT
 time.sleep(2)
 
 # If write pin is connected to ground on start-up, CircuitPython can write to CIRCUITPY filesystem.
