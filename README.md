@@ -747,6 +747,71 @@ while True:
 
 #### **Reflection**
 Figuring out the timings for the LED was a little tricky but otherwise this assignment was pretty easy since almost everything was set up for us. 
+
+#
+## **Data**
+#
+## **Storage**
+#
+#### **Description**
+The task for this assignment was to recreate [crash avoidance part 2](#lightpower) except have it save the flight data to a spreadsheet.
+
+#### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/datap1.gif?raw=true" width="400">
+
+[And here's the link to the data from this flight](https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/data.csv)
+
+#
+#### **Wiring**
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/data_p1_diagram.png?raw=true" width="400">  
+
+####
+
+ **Code**
+<details>
+<summary>Data Part 1 Code</summary>
+
+```python
+#type: ignore
+
+import busio
+import adafruit_mpu6050
+import board
+import time
+import digitalio
+
+sda_pin = (board.GP26) #set SDA as GP26 and SCL as GP27
+scl_pin = (board.GP27)
+i2c = busio.I2C(scl_pin, sda_pin) #setup I2C connection
+
+led=digitalio.DigitalInOut(board.GP16) #assign LED to GP16 and set it as output
+led.direction=digitalio.Direction.OUTPUT 
+
+mpu = adafruit_mpu6050.MPU6050(i2c) #setup accelerometer 
+
+with open("/data.csv", "a") as datalog:
+    datalog.write("=========,=========,=========,=========,=========\n")
+    datalog.flush()
+    while True:
+        elapsed = time.monotonic()
+        print(f"X:{mpu.acceleration[0]} Y:{mpu.acceleration[1]} Z:{mpu.acceleration[2]}") #print values
+        time.sleep(0.2) #wait so the values are readable
+        if mpu.acceleration[2] < 1 and mpu.acceleration[2] > -12: #if z acceleration is less than 1 (meaning board is on its side) and greater than -12 (so LED won't turn on when board is accelerating in Z)
+            if mpu.acceleration[0] > +-5 or mpu.acceleration[1] > +-5: #also, if X and Y acceleration are greater than positive or negative 5 (meaning gravity is affecting one of them)
+                led.value=True #turn LED on
+                tilt = 1
+        else: #otherwise
+            led.value=False #LED is off
+            tilt = 0
+        datalog.write(f"{elapsed},{mpu.acceleration[0]},{mpu.acceleration[1]},{mpu.acceleration[2]},{tilt}\n")
+        datalog.flush()
+
+```
+</details>
+
+#### **Reflection**
+The wiring for this assignment was a little tough since the board was getting kind of cramped, but I managed to stick the switch in between the battery and the Pico. 
 &nbsp;
 
 #
