@@ -826,6 +826,8 @@ The task for this assignment was to make two graphs that display our flight data
 #
 <img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/data_p2.png?raw=true" width="400">
 
+Additionally, [here is a link to the spreadsheet](https://docs.google.com/spreadsheets/d/1A0e_sVNWiaQ08uxXwkxiofOWLMcJmxqA_KzmmWoHaQE/edit?usp=sharing)
+
 #
 
 
