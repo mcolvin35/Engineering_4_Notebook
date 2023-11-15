@@ -16,7 +16,7 @@ led.direction=digitalio.Direction.OUTPUT
 mpu = adafruit_mpu6050.MPU6050(i2c) #setup accelerometer 
 
 with open("/data.csv", "a") as datalog:
-    datalog.write("=========,=========,=========,=========,=========\n")
+    datalog.write("=========,=========,=========,=========,=========\n") #write line to tell flights apart
     datalog.flush()
     while True:
         elapsed = time.monotonic()
@@ -29,5 +29,5 @@ with open("/data.csv", "a") as datalog:
         else: #otherwise
             led.value=False #LED is off
             tilt = 0
-        datalog.write(f"{elapsed},{mpu.acceleration[0]},{mpu.acceleration[1]},{mpu.acceleration[2]},{tilt}\n")
+        datalog.write(f"{elapsed},{mpu.acceleration[0]},{mpu.acceleration[1]},{mpu.acceleration[2]},{tilt}\n") #write data to file 
         datalog.flush()
