@@ -23,6 +23,9 @@
 * [Morse Code](#morse-code)
     * [Part 1](#translation)
     * [Part 2](#transmission)
+* [Data](#data)
+    * [Part 1](#storage)
+    * [Part 2](#analysis)
 &nbsp;
 
 ## **Launchpad**
@@ -791,7 +794,7 @@ led.direction=digitalio.Direction.OUTPUT
 mpu = adafruit_mpu6050.MPU6050(i2c) #setup accelerometer 
 
 with open("/data.csv", "a") as datalog:
-    datalog.write("=========,=========,=========,=========,=========\n")
+    datalog.write("=========,=========,=========,=========,=========\n") #write line to tell flights apart
     datalog.flush()
     while True:
         elapsed = time.monotonic()
@@ -804,7 +807,7 @@ with open("/data.csv", "a") as datalog:
         else: #otherwise
             led.value=False #LED is off
             tilt = 0
-        datalog.write(f"{elapsed},{mpu.acceleration[0]},{mpu.acceleration[1]},{mpu.acceleration[2]},{tilt}\n")
+        datalog.write(f"{elapsed},{mpu.acceleration[0]},{mpu.acceleration[1]},{mpu.acceleration[2]},{tilt}\n") #write data to file 
         datalog.flush()
 
 ```
@@ -812,6 +815,22 @@ with open("/data.csv", "a") as datalog:
 
 #### **Reflection**
 The wiring for this assignment was a little tough since the board was getting kind of cramped, but I managed to stick the switch in between the battery and the Pico. 
+
+#
+## **Analysis**
+#
+#### **Description**
+The task for this assignment was to make two graphs that display our flight data - one for X, Y, and Z acceleration values and one for tilt data. 
+
+#### **Evidence**
+#
+<img src="https://github.com/mcolvin35/Engineering_4_Notebook/blob/main/images/data_p2.png?raw=true" width="400">
+
+#
+
+
+#### **Reflection**
+I haven't used Google sheets in a really long time so it took some getting used to but other than that this assingment was simple. 
 &nbsp;
 
 #
